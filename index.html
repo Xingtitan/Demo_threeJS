@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My first three.js app</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="title">360 Image</h1>
+    <div id="container"></div>
+    <p id="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
+      debitis aliquid molestias aspernatur expedita neque quod beatae rem
+      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
+      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
+    </p>
+
+    <script type="module">
+      // Adding Libraries
+      import * as THREE from "./modules/three.module.js";
+      import { OrbitControls } from "./modules/OrbitControls.js";
+
+      let scene, camera, renderer, controls;
+
+      const init = () => {
+        // Create sceen and camera
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(
+          75,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          1000
+        );
+
+        // Create renderer
+        const container = document.getElementById("container");
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        // container.body.appendChild(renderer.domElement);
+        container.appendChild(renderer.domElement);
+        document.body.appendChild(container);
+
+        camera.position.set(-1, 0, 1);
+
+        // Add controls
+        controls = new OrbitControls(camera, renderer.domElement);
+        controls.autoRotate = true; // Call controls.update in animate() to make it work
+        controls.autoRotateSpeed = 0.7;
+        controls.enableDamping = true;
+        controls.enableZoom = false;
+
+        // Create a sphere and add it to the scene
+        const geometry = new THREE.SphereGeometry(50, 32, 32);
+        const textures = new THREE.TextureLoader().load(
+          "./images/360_industrial_sunset.jpg"
+        );
+        textures.wrapS = THREE.RepeatWrapping;
+        textures.repeat.x = -1;
+        const material = new THREE.MeshBasicMaterial({
+          map: textures,
+          side: THREE.DoubleSide,
+        });
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        const onResize = () => {
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+        };
+
+        const animate = () => {
+          controls.update();
+          renderer.render(scene, camera);
+          requestAnimationFrame(animate);
+        };
+
+        animate();
+      };
+
+      init();
+    </script>
+  </body>
+</html>
