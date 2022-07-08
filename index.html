@@ -1,128 +1,176 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>My first three.js app</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
-    <h1 class="title">360 Image</h1>
-    <div id="container"></div>
-    <p id="content">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, minus
-      debitis aliquid molestias aspernatur expedita neque quod beatae rem
-      accusantium praesentium voluptatum, nobis tempora dolorum voluptatem!
-      Rerum aspernatur ipsam impedit! Lorem ipsum dolor sit amet consectetur
-    </p>
 
-    <script type="module">
-      // Adding Libraries
-      import * as THREE from "./modules/three.module.js";
-      import { OrbitControls } from "./modules/OrbitControls.js";
+<head>
+  <meta charset="utf-8" />
+  <title>My first three.js app</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
 
-      let scene, camera, renderer, controls;
+<body>
+  <div id="container"></div>
 
-      const init = () => {
-        // Create sceen and camera
-        scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera(
-          75,
-          window.innerWidth / window.innerHeight,
-          0.1,
-          1000
-        );
+  <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. At a consectetur iusto temporibus,
+    perferendis eaque minus velit eos nam molestias pariatur reiciendis aliquid ipsa iste. Id pariatur explicabo esse
+    provident cupiditate cumque? Veritatis voluptates officiis doloremque illo assumenda id ad, aperiam quaerat, nam est
+    molestiae placeat, totam numquam eveniet dolores cumque iusto velit ex eius soluta nesciunt. Maxime sunt veniam
+    incidunt aut vero rerum corporis aliquam iure dolores, ipsam velit, libero dolorem dignissimos fugit odio aliquid
+    quaerat similique! Ipsa magni incidunt ullam, fugit alias sint voluptatibus assumenda temporibus quaerat culpa
+    tempora eligendi pariatur suscipit illo vitae, enim nihil! Sequi voluptates, id, impedit repellendus soluta dolorum
+    dicta, eum rem eligendi doloremque excepturi hic aliquam ad? Nostrum error maxime, corrupti maiores debitis eius ut
+    reprehenderit perspiciatis repellat! Quibusdam itaque, perspiciatis atque eius fuga quia incidunt exercitationem
+    quisquam velit quaerat ex nostrum voluptatem? Pariatur doloremque fugiat hic, quis exercitationem magni nobis,
+    minima cupiditate ipsam, velit culpa dolores adipisci? Deserunt sed unde, voluptas error repellendus sunt recusandae
+    sequi distinctio nam repudiandae maxime corrupti illo veniam ducimus nemo eos explicabo aliquid harum non nesciunt
+    reprehenderit quam excepturi. Voluptas, accusamus? Minima modi aperiam nesciunt ipsum et voluptas, corrupti porro
+    ducimus repellendus quas fuga culpa at autem, ipsa ea ullam vitae. Quod obcaecati cumque eius reprehenderit
+    consectetur, omnis libero fuga! A incidunt reiciendis recusandae corrupti labore in inventore laborum pariatur
+    beatae iste est aspernatur magnam, quos aliquam perspiciatis accusantium porro nihil ducimus deserunt placeat sint
+    commodi expedita facere. Totam placeat voluptas neque aliquid asperiores voluptates dolores architecto unde, in at
+    reiciendis omnis assumenda doloribus velit rem fuga ipsam ipsa optio sunt est ut suscipit? Minus laboriosam aperiam
+    sunt est voluptatem, voluptas eos cum voluptatibus, obcaecati saepe repellat et nemo asperiores necessitatibus
+    labore fugit pariatur facilis accusantium quis omnis? Reprehenderit facere eveniet non commodi mollitia libero
+    quibusdam animi, quia quisquam fugit ipsum, laborum sit minus. Cumque fugit, corporis perferendis ea sit facilis
+    pariatur consequuntur laboriosam nemo omnis odit aperiam earum ducimus repellendus! Facere, dolore, porro
+    consectetur suscipit sed laborum necessitatibus, praesentium odio unde animi maxime. Beatae, animi culpa? Facere,
+    tempore! Cupiditate similique pariatur laudantium, impedit, voluptate est expedita voluptatem aspernatur porro
+    molestiae sit? Expedita illo laudantium nobis eum saepe veritatis commodi, assumenda eius. Velit quia, officia
+    eveniet quam, pariatur harum consequuntur veritatis corrupti aut consectetur mollitia enim reiciendis iusto nam
+    optio quis cupiditate quisquam, molestias animi ratione cumque officiis exercitationem expedita. In harum dolores
+    perferendis aperiam alias, nostrum, voluptatum molestiae assumenda autem, nam impedit modi natus minus unde commodi.
+    Cumque eaque debitis adipisci non illum? Molestias, iure! Veniam ab velit repellendus adipisci, deleniti amet
+    similique vero quo molestias possimus nisi harum voluptatum quod nostrum? Architecto aspernatur eligendi officiis
+    itaque. Illo tempora eius culpa veritatis nisi consequatur praesentium voluptatem exercitationem ut cum
+    perspiciatis, adipisci sint saepe ea expedita! Eligendi facere minima voluptatibus veritatis placeat aperiam
+    doloremque. Officiis perspiciatis ipsam obcaecati est voluptatum reiciendis soluta eos consectetur consequuntur
+    fugit, reprehenderit, praesentium ex in natus! Officiis nam, eligendi minus velit expedita non corrupti, sit minima
+    porro illum iusto, similique deleniti aspernatur et! Eveniet natus ullam cumque nostrum ratione quas! Quisquam sint
+    minima quae ullam repellat odit accusantium ipsam quaerat unde iste ab totam assumenda, facilis molestias hic amet
+    explicabo ad excepturi animi natus ex quam, voluptatibus laboriosam? Vitae deserunt necessitatibus perspiciatis
+    minus optio quos, laudantium obcaecati veritatis, eligendi in explicabo nulla. Sed quidem deserunt harum similique
+    velit maiores illum hic modi maxime eligendi dolores odit culpa asperiores, aspernatur quibusdam? Nobis a totam,
+    doloremque id eveniet quibusdam nesciunt odio sit. Autem porro fugit necessitatibus ullam, dolores architecto vero
+    eius cumque deserunt quod accusamus ratione maxime, expedita quos. Quasi accusamus aspernatur optio! Natus incidunt
+    corrupti voluptatem est necessitatibus obcaecati delectus, ex tenetur explicabo ab, veniam itaque deserunt, animi
+    consectetur laborum culpa? Voluptatem consequatur voluptate itaque in consequuntur quaerat nisi blanditiis fugit,
+    ad, unde consectetur velit, sint ipsa. Alias, deleniti aperiam! Cumque, labore fugiat velit architecto quasi
+    deserunt rerum quaerat iste ab odio, optio nostrum dolore possimus molestias magni ea consequuntur aut adipisci
+    doloremque omnis repellendus? Quasi quibusdam perspiciatis praesentium aut doloremque ab explicabo consequatur.
+    Natus nihil cumque iste, architecto in soluta ea consectetur, tempora nisi quibusdam voluptates? Magnam ea modi
+    neque hic corporis, commodi assumenda. Quibusdam hic sequi voluptates nostrum ducimus consequatur ipsam vero cumque
+    accusantium iusto cum dolore perferendis qui harum recusandae dolorem commodi saepe quam corrupti quisquam mollitia,
+    doloribus nihil molestias. Architecto, quia distinctio. Sunt cupiditate fugiat distinctio voluptatum culpa ab nisi
+    quos. Accusamus dignissimos illum dolor quam quisquam delectus iure laborum sequi quidem omnis ut, suscipit dolore
+    praesentium, inventore voluptas deleniti nobis numquam. Repellat quod repellendus quaerat deserunt beatae doloremque
+    excepturi dignissimos, accusantium enim? Omnis tempora officia tenetur sequi, ab dolorum fugit sint vel distinctio
+    itaque dolore nemo consequatur explicabo dicta illum eveniet quis doloremque soluta! Fuga, maxime quidem. Non
+    consequuntur, alias commodi aliquam ratione magnam, rerum dolorum quia illo a sit odio soluta laborum quaerat?
+    Assumenda voluptate quas repellendus odio vitae totam, voluptates aspernatur ipsa, magnam nihil deserunt ipsam,
+    itaque fugiat qui architecto eius! Qui quidem reiciendis maiores mollitia vitae? Commodi nisi itaque repellendus
+    laborum libero adipisci ipsam in sunt earum aut sequi ea, est, quasi, quisquam optio maiores consectetur explicabo
+    nam ut? Magni error ipsa ut soluta cumque iste, facere dolorum modi similique distinctio quas voluptas commodi et
+    deserunt ex, hic dolore, a exercitationem impedit animi? Quis ipsam iste recusandae ex, fugiat aut repellendus fugit
+    tempora? Aspernatur, veritatis magni atque necessitatibus ipsum praesentium itaque distinctio ea eveniet maxime
+    reprehenderit quo commodi, cum alias neque. Optio quae quo reprehenderit quod fugiat unde nisi, ex voluptatum
+    corporis modi, eius perspiciatis reiciendis officia aperiam dolor repellendus excepturi expedita recusandae
+    distinctio molestias asperiores facilis. Dicta aliquid quia cupiditate officiis vero explicabo quis vitae nisi neque
+    velit obcaecati, exercitationem ipsum temporibus eveniet, ea non magni doloribus illo aliquam. Illum accusamus
+    quibusdam laboriosam rem! Pariatur ullam consequuntur dolores quidem magni reprehenderit quod id placeat voluptatem?
+    Aliquid doloribus perferendis accusamus dolore totam esse, quos quisquam cum libero consequuntur hic nesciunt,
+    suscipit ratione pariatur architecto, veritatis praesentium. Est ab saepe vero praesentium in modi neque
+    voluptatibus.</p>
 
-        // Create renderer
-        const container = document.getElementById("container");
-        renderer = new THREE.WebGLRenderer({ antialias: true });
+
+  <script type="module">
+    // Adding Libraries
+    import * as THREE from "./modules/three.module.js";
+    import { OrbitControls } from "./modules/OrbitControls.js";
+
+    let scrollY = 0;
+
+    document.addEventListener("scroll", () => {
+      scrollY = window.pageYOffset;
+      // console.log("scrollY: ", scrollY);
+    });
+
+    const container = document.getElementById("container");
+    let offsetTopContainerY = container.offsetTop;
+    // console.log("offsetTopContainerY: ", offsetTopContainerY);
+
+    let scene, camera, renderer, controls;
+
+    const init = () => {
+      // Create sceen and camera
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+
+      // Create renderer
+      const container = document.getElementById("container");
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      container.appendChild(renderer.domElement);
+
+      camera.position.set(0, 0, 1);
+
+      // Add controls
+      controls = new OrbitControls(camera, renderer.domElement);
+      // controls.autoRotate = true; // Call controls.update in animate() to make it work
+      // controls.autoRotateSpeed = 0.7;
+      // controls.enableDamping = true;
+      // controls.enableZoom = true;
+
+      // Create a sphere and add it to the scene
+      const geometry = new THREE.SphereGeometry(50, 32, 32);
+      const textures = new THREE.TextureLoader().load(
+        "./images/360_industrial_sunset.jpg"
+      );
+      textures.wrapS = THREE.RepeatWrapping;
+      textures.repeat.x = -1;
+      const material = new THREE.MeshBasicMaterial({
+        map: textures,
+        side: THREE.DoubleSide,
+      });
+      const sphere = new THREE.Mesh(geometry, material);
+      scene.add(sphere);
+
+      const onResize = () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
-        // container.body.appendChild(renderer.domElement);
-        container.appendChild(renderer.domElement);
-        document.body.appendChild(container);
-
-        camera.position.set(-1, 0, 1);
-
-        // Add controls
-        controls = new OrbitControls(camera, renderer.domElement);
-        controls.autoRotate = true; // Call controls.update in animate() to make it work
-        controls.autoRotateSpeed = 0.7;
-        controls.enableDamping = true;
-        controls.enableZoom = false;
-
-        // Create a sphere and add it to the scene
-        const geometry = new THREE.SphereGeometry(50, 32, 32);
-        const textures = new THREE.TextureLoader().load(
-          "./images/360_industrial_sunset.jpg"
-        );
-        textures.wrapS = THREE.RepeatWrapping;
-        textures.repeat.x = -1;
-        const material = new THREE.MeshBasicMaterial({
-          map: textures,
-          side: THREE.DoubleSide,
-        });
-        const sphere = new THREE.Mesh(geometry, material);
-        scene.add(sphere);
-
-        const onResize = () => {
-          renderer.setSize(window.innerWidth, window.innerHeight);
-          camera.aspect = window.innerWidth / window.innerHeight;
-          camera.updateProjectionMatrix();
-        };
-
-        const animate = () => {
-          controls.update();
-          renderer.render(scene, camera);
-          requestAnimationFrame(animate);
-        };
-
-        animate();
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
       };
 
-      init();
-    </script>
-  </body>
+      const animate = () => {
+        requestAnimationFrame(animate);
+
+        // let magnificationFactor = scrollY - offsetTopContainerY;
+        // console.log("magnificationFactor: ", magnificationFactor);
+
+        // if (Math.abs(magnificationFactor) > 600) {
+        //   sphere.rotation.x = 0;
+        //   sphere.rotation.y = 0;
+        // } else {
+        //   sphere.rotation.x += magnificationFactor * 0.00001;
+        //   sphere.rotation.y += 0.002;
+        // }
+        sphere.rotation.x += 0.002;
+        // sphere.rotation.y += 0.002;
+
+        console.log("sphere.rotation.x: ", sphere.rotation.x);
+        // console.log("sphere.rotation.y: ", sphere.rotation.y);
+        controls.update();
+        renderer.render(scene, camera);
+      };
+
+      animate();
+    };
+
+    init();
+  </script>
+</body>
+
 </html>
